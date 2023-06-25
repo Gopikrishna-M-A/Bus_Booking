@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="main">
+     
+        <main class="app">
+          <div class="screen-wrap">
+            <section class="screen-home">
+              <div class="screen-home__form-wrap">
+                <div class="screen-home__form">
+                  <form action="/book" method="post">
+                    <div id="formdetail">
+                      <div class="screen-home__location">
+                        <div class="lable">
+                          <figure class="icon"><img src="https://i.ibb.co/KwnYdXN/location.png"></figure>
+                          <span class="text">Location Details</span>
+                        </div>
+                        <div class="input-wrap">
+                          <div class="inside-wrap">
+                          
+                            <div class="from">
+                              <span class="inside-lable">From</span>
+                              <input disabled class="input" type="" name="" value="SCMS">
+                            </div>
+                            <div class="to">
+                              <span class="inside-lable">To</span>
+                              <select class="input" name="destination" id="destination">
+                                <option value="Ernakulam">Ernakulam</option>
+                                <option value="Koratty">Koratty</option>
+                                <option value="karukutty">karukutty</option>
+                                <option value="Chalakudy">Chalakudy</option>
+                                <option value="Kodakara">Kodakara</option>
+                                <option value="Thrissur">Thrissur</option>
+                                <option value="Aluva">Aluva</option>
+                                <option value="Perumbavoor">Perumbavoor</option>
+                                <option value="Palarivattam">Palarivattam</option>
+                                <option value="Thrippunithura">Thrippunithura</option>
+                              </select>
+                            
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="screen-home__date">
+                        
+                        <div class="input-wrap">
+                          <div class="inside-wrap">
+                            <div class="onward">
+                              <input value="one" name="way" class="input" id="radio1" type="radio">
+                              <label for="radio1">One Way</label>
+                            </div>
+                            <div class="return">
+                                <input value="two"  name="way" class="input" id="radio2" type="radio">
+                                <label for="radio2">Two Way</label>
+                            </div>
+                          </div>
+                          <input name="date" class="date" type="date">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="screen-home__submit-wrap">
+                      <span class="line"></span>
+                      <button type="submit" class="screen-home__bus-page" id="">
+                        <div class="screen-home__inside-wave">
+      
+                        </div>
+                        <figure class="screen-home__bus-arrow-wrap">
+                          <img src="https://i.ibb.co/nQ4khG8/arrow.png">
+                        </figure>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <!-- <div class="screen-home__recent-search">
+                  <div class="lable">
+                    <figure class="icon"><img src="https://i.ibb.co/dM8cwj6/recent-search.png"></figure>
+                    <span class="text">Recent search</span>
+                  </div>
+                  <div class="screen-home__rs-wrap">
+                    <ul class="screen-home__rs-row">
+                      <li class="screen-home__rs-col">
+                        <div class="screen-homers-from-to">
+                          <span>Chennai</span>
+                          <span class="screen-home__rs-arrow"></span>
+                          <span>Bangalore</span>
+                        </div>
+                        <div class="screen-home__rs-date">05 / 12 / 2019</div>
+                      </li>
+                      <li class="screen-home__rs-col">
+                        <div class="screen-homers-from-to">
+                          <span>Chennai</span>
+                          <span class="screen-home__rs-arrow"></span>
+                          <span>Bangalore</span>
+                        </div>
+                        <div class="screen-home__rs-date">05 / 12 / 2019</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div> -->
+              </div>
+            </section>
+           
+          </div>
+ 
+        </main>
+      </div>
+
+      <script src="/javascript/script.js"></script>
+</body>
+</html>

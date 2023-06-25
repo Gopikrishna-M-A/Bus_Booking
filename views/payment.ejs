@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script> -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <link rel="stylesheet" href="/css/payment.css">
+    <!-- <link rel="stylesheet" href="/css/style.css" -->
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-1">
+     
+        <main class="app">
+                <div class="wrapper">
+                    <div class="boarding-ticket">
+                      <div class="ticket-header">
+                        <div class="logo">SSET</div>    
+                      </div>
+                  
+                      <div class="ticket-content">
+                        <div class="ticket-description">
+                          <span>Bus No <%= bus %> /// <%= date %></span>
+                          <div class="dot"></div>        
+                        </div>
+                        
+                        <div class="ticket-line">
+                          <div class="input-field">
+                            <input id="Uname" disabled type=text placeholder=" " value="<%= name %>"/>
+                            <div class="input-placeholder">Passenger</div>
+                          </div>
+                        </div>
+                        
+                        <div class="ticket-line">
+                          <div class="input-field">
+                            <input disabled id="amount" type=text placeholder=" " value="₹<%= price %>"/>
+                            <div class="input-placeholder">Amount</div>
+                          </div>
+                          
+                          <div class="input-field">
+                            <input id="destination" disabled type=text placeholder=" " value="<%= destination %>"/>
+                            <div class="input-placeholder">Destination</div>
+                          </div>
+                        </div>
+                        
+                        <div class="ticket-line">
+                          <div class="input-field">
+                            <!-- <input type=text placeholder=" " value="PREMIUM"/> -->
+                            <!-- <div class="input-placeholder">Class</div> -->
+                          </div>
+                          
+                          <div class="input-field">
+                            <!-- <input type=text placeholder=" " value="2"/> -->
+                            <!-- <div class="input-placeholder">Row</div> -->
+                          </div>
+                          
+                          <div class="input-field">
+                            <!-- <input type=text placeholder=" " value="F"/> -->
+                            <!-- <div class="input-placeholder">Seat</div> -->
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="ticket-code">
+                        <div class="code-content">
+                          <div class="flight-code">
+                            <div class="airport-code">
+                              <div class="iata-code">Scan</div>
+                              <div class="city">QR</div>
+                            </div>
+                            
+                            <div class="flight-separator">
+                              <div class="arrow-separator"></div>
+                            </div>
+                            
+                            <div class="airport-code">
+                              <div class="iata-code">PAY</div>
+                              <div class="city">NOW</div>
+                            </div>
+                          </div>
+                          <div id="qrcode" class="qr-code"></div>
+                        </div>
+                        
+                        <form method="post" action="/verify-payment" id="myForm" class="ticket-actions">
+                          <!-- <button class="help-button">?</button> -->
+                          <input class="hide" type="text" name="paymentId" id="paymentIdinp">
+                          <input class="hide" type="text" name="orderId" id="orderIdinp">
+                          <input class="hide" type="text" name="price" value="<%= price %>" >
+                          <input class="hide" type="text" name="destination" value="<%= destination %>" >
+                          <input class="hide" type="text" name="way" value="<%= way %>" id="way">
+                          <input class="hide" type="text" name="date" value="<%= date %>" id="date">
+                          <button id="pay-button" class="wallet-button">Pay Now</button>
+                        </form>
+                        <input class="hide" type="text" name="" value="<%= orderId %>" id="orderId">
+                      </div>
+                    </div>
+                  </div>
+                  
+          
+        </main>
+      </div>
+      <script src="/javascript/pay.js"></script>
+</body>
+</html>
